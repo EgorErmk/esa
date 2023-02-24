@@ -23,7 +23,7 @@ public class HomeController {
         }
     }
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public String home(Model model) {
 
         ArrayList<fruit> data = new ArrayList<>();

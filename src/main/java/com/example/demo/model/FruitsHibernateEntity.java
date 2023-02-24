@@ -1,9 +1,6 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Basic;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "fruits", schema = "myschema", catalog = "mydb")
@@ -17,6 +14,10 @@ public class FruitsHibernateEntity {
     @Basic
     @Column(name = "sugar", nullable = false)
     private int sugar;
+    @Id
+    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     public String getName() {
         return name;
@@ -40,5 +41,13 @@ public class FruitsHibernateEntity {
 
     public void setSugar(int sugar) {
         this.sugar = sugar;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
