@@ -12,7 +12,7 @@
     </tr>
     <tr th:each="fruit : ${data}">
         <!--/*@thymesVar id="fruit" type="com.example.demo.model.fruit"*/-->
-        <td th:text="${fruit.name}"></td>
+        <td><a th:href="@{/{name}(name = ${fruit.name})}" th:text="${fruit.name}"></a></td>
         <td th:text="${fruit.calories}"></td>
         <td th:text="${fruit.sugar}"></td>
     </tr>

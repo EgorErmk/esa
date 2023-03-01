@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo.model.JMS.EmailHibernateEntity" table="email" schema="myschema" catalog="mydb">
+        <id name="emailId">
+            <column name="email_id" sql-type="integer"/>
+        </id>
+        <property name="typeOfOperation">
+            <column name="type_of_operation" sql-type="varchar"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar"/>
+        </property>
+    </class>
+</hibernate-mapping>

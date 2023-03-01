@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 version="3.0">
+
+    <entity class="com.example.demo.model.JMS.LogsHibernateEntity">
+        <table name="logs" schema="myschema" catalog="mydb"/>
+        <attributes>
+            <id name="id">
+                <column name="id" precision="-1" />
+            </id>
+            <basic name="changeType">
+                <column name="change_type" length="30" />
+            </basic>
+            <basic name="changedEntity">
+                <column name="changed_entity"/>
+            </basic>
+            <basic name="changedValues">
+                <column name="changed_values" nullable="true" precision="-1"/>
+            </basic>
+            <basic name="dateOfChange">
+                <column name="date_of_change" nullable="true" precision="-1"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="com.example.demo.model.FruitsHibernateEntity"/>
+    <entity class="com.example.demo.model.JMS.EmailHibernateEntity">
+        <table name="email" schema="myschema" catalog="mydb"/>
+        <attributes>
+            <id name="emailId">
+                <column name="email_id" precision="-1"/>
+            </id>
+            <basic name="typeOfOperation">
+                <column name="type_of_operation"/>
+            </basic>
+            <basic name="email">
+                <column name="email"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

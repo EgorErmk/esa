@@ -8,9 +8,14 @@
     <property name="connection.driver_class">org.postgresql.Driver</property>
       <property name="connection.username">server</property>
       <property name="connection.password">server</property>
-      <mapping class="com.example.demo.model.FruitsHibernateEntity"/>
+    <mapping class="com.example.demo.model.FruitsHibernateEntity"/>
       <mapping resource="FruitsHibernateEntity.hbm.xml"/>
-      <!-- <property name="connection.username"/> -->
+    <mapping resource="LogsHibernateEntity.xml"/>
+    <mapping resource="LogsHibernateEntity.hbm.xml"/>
+    <mapping class="com.example.demo.model.JMS.LogsHibernateEntity"/>
+    <mapping resource="EmailHibernateEntity.hbm.xml"/>
+    <mapping class="com.example.demo.model.JMS.EmailHibernateEntity"/>
+    <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->
